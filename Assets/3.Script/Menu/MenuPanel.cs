@@ -57,6 +57,7 @@ public class MenuPanel : MonoBehaviour
     {
         RoomOptions option = new()
         {
+           
             MaxPlayers = 8,
         };
         PhotonNetwork.JoinRandomOrCreateRoom(roomOptions: option);
@@ -92,7 +93,8 @@ public class MenuPanel : MonoBehaviour
         PhotonNetwork.CreateRoom(roomName,
                 new RoomOptions() // 기본 생성자와 동시에 초기화 -> 메모리 아끼기
                 {
-                    MaxPlayers = maxPlayer,  
+                    
+                    MaxPlayers = maxPlayer,
                 }
             ); 
 

@@ -17,3 +17,12 @@ public class PhotonTest : MonoBehaviour
         }
     }
 }
+
+
+/*
+    Photon : 릴레이 서버
+            ㄴ 마스터 클라이언트가 나가면 랜덤으로 마스터 클라이언트 부여
+            ㄴ
+ 
+ 
+ */
