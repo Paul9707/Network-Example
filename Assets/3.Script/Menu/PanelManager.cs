@@ -71,7 +71,7 @@ public class PanelManager : MonoBehaviourPunCallbacks
     }
     public override void OnJoinedLobby()
     {
-        PanelOpen("Lobby");
+        PanelOpen("lobby");
     }
 
     public override void OnLeftLobby()
