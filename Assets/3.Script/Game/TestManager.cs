@@ -37,6 +37,20 @@ public class TestManager : MonoBehaviour
 
         Transform playerPos = startPostions.GetChild(playerNumber).transform;
         GameObject playerObj = PhotonNetwork.Instantiate("Players/Player", playerPos.position, playerPos.rotation);
+        playerObj.GetComponent<PlayerController>().eyes[(int)PhotonNetwork.LocalPlayer.CustomProperties["EyeToggleValue"]].SetActive(true);
+        /*switch (PhotonNetwork.LocalPlayer.CustomProperties["EyeToggleValue"])
+        {
+            case 0:
+                *//*playerObj.GetComponent<PlayerController>().eyes[(int)PhotonNetwork.LocalPlayer.CustomProperties["EyeToggleValue"]].SetActive(true);*//*
+                break;
+            case 1:
+                playerObj.GetComponent<PlayerController>().eyes[1].SetActive(true);
+                break;
+            case 2:
+                playerObj.GetComponent<PlayerController>().eyes[2].SetActive(true);
+                break;
+            
+        }*/
         playerPos.name = $"Player {playerNumber}";
     }
 

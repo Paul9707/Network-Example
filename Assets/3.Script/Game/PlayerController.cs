@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviourPun, IPunObservable
     public Text hpText;
     public Text shotText;
 
+    public GameObject[] eyes;
     #endregion
 
 
@@ -79,6 +80,8 @@ public class PlayerController : MonoBehaviourPun, IPunObservable
     // Bomb에 포톤뷰가 붙을 경우 불필요한 패킷이 교환되는 비효율이 발생 하므로, 
     // 특정 클라이언트가 Fire를 호출할 경우 다른 클라이언트에게 RPC를 통해
     // 똑같이 Fire를 호출하게 하고싶음
+    // 실시간 네트워킹을 구현할때 좋다 -> 추측 항법 (Dead Reckoning) 알고리즘을 활용하기 위해 투사체는 각 클라이언트에서 생성하도록 
+    // Remote Procedure Call을 함.
     [PunRPC] // 어트리뷰트 붙어여한다.
     private void Fire(Vector3 shotPoint, Vector3 shotDirection, PhotonMessageInfo info)
     {
@@ -94,6 +97,7 @@ public class PlayerController : MonoBehaviourPun, IPunObservable
         bomb.owner = photonView.Owner;
 
         // 폭탄의 위치에서 폭탄의 운동량 만큼 지연시간동안 진행한 위치로 보정
+        // 지연 보상
         bomb.rb.position += bomb.rb.velocity * lag;
     }
 
