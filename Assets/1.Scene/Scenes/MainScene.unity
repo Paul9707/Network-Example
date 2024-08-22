@@ -135,12 +135,12 @@ GameObject:
   - component: {fileID: 26510901}
   - component: {fileID: 26510900}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: Assign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &26510899
 RectTransform:
   m_ObjectHideFlags: 0
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 59520782}
   - component: {fileID: 59520781}
   m_Layer: 5
-  m_Name: InputField (Legacy)
+  m_Name: IDInputFD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2569,12 +2569,12 @@ GameObject:
   - component: {fileID: 862482221}
   - component: {fileID: 862482220}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: Login
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &862482219
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2749,7 +2749,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB85C\uADF8\uC778"
+  m_Text: "\uB85C\uADF8\uC544\uC6C3\n"
 --- !u!222 &900973095
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3149,7 +3149,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idInput: {fileID: 59520781}
-  logInButton: {fileID: 1666172903}
+  pwInput: {fileID: 1244318219}
+  createButton: {fileID: 26510900}
+  logInButton: {fileID: 862482220}
+  logOutButton: {fileID: 1666172903}
 --- !u!1 &992884097
 GameObject:
   m_ObjectHideFlags: 0
@@ -3276,6 +3279,50 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &998630717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 998630719}
+  - component: {fileID: 998630718}
+  m_Layer: 0
+  m_Name: FireBaseManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &998630718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998630717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10fca3a6be0076499085b13584a2642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &998630719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998630717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 706.7, y: 305.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1018719896
 GameObject:
   m_ObjectHideFlags: 0
@@ -4337,12 +4384,12 @@ GameObject:
   - component: {fileID: 1244318220}
   - component: {fileID: 1244318219}
   m_Layer: 5
-  m_Name: InputField (Legacy)
+  m_Name: PasswordInputFD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1244318218
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5098,7 +5145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1575837953
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5647,7 +5694,7 @@ GameObject:
   - component: {fileID: 1666172904}
   - component: {fileID: 1666172903}
   m_Layer: 5
-  m_Name: Button (Legacy) (1)
+  m_Name: LogoutBT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

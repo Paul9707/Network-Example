@@ -86,9 +86,9 @@ public class PlayerController : MonoBehaviourPun, IPunObservable
     private void Fire(Vector3 shotPoint, Vector3 shotDirection, PhotonMessageInfo info)
     {
         //지연을 보상해서, 서버 시간과 내 클라이언트의 시간 차이만큼 값을 보정.
-        print($"Fire Procedure Called by {info.Sender.NickName}");
+        /*print($"Fire Procedure Called by {info.Sender.NickName}");
         print($"local time : {PhotonNetwork.Time}");
-        print($"server time : {info.SentServerTime}");
+        print($"server time : {info.SentServerTime}");*/
 
         float lag = (float)(PhotonNetwork.Time - info.SentServerTime);
 
